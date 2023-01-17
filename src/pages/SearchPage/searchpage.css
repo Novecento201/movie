@@ -4,7 +4,9 @@
   gap: 1rem;
   margin-bottom: 2rem;
 }
-
+.searchPage_container {
+  height: 100%;
+}
 .searchPage_title {
   font-size: var(--title-size);
   font-family: 'Poppins';
@@ -46,4 +48,10 @@
 
 .searchPage_card:hover .img_searchPage {
   filter: brightness(0.5);
+}
+
+.searchPage_genres {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }

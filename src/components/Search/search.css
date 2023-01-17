@@ -1,3 +1,15 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.search_filterIcon {
+  width: 25px;
+  height: 25px;
+}
+
 .search_container {
   position: relative;
   display: flex;
@@ -7,11 +19,12 @@
 }
 .search_icon {
   position: absolute;
-  right: 5px;
+  right: 45px;
   top: 5px;
   cursor: pointer;
   transition: 300ms ease-in-out;
   font-size: calc(var(--font-size) * 1.2);
+  color: gray;
 }
 
 .search_icon:hover {
@@ -23,4 +36,27 @@
   padding: 4px;
   font-size: var(--font-size);
   font-family: 'Roboto';
+}
+
+.search_filter_container {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: gray;
+}
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(66, 59, 59, 0.5);
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+}
+.dropdown label {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown input[type='checkbox'] {
+  margin-right: 10px;
 }

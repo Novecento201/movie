@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
-import { AiOutlineSearch } from 'react-icons/ai';
-import { BsSearch } from 'react-icons/bs';
+import { BsFilterSquare, BsSearch } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import { InputContext } from '../../Context/InputContext';
 
@@ -47,14 +46,35 @@ const Search = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setShowDropdown((show) => (show === true ? false : false));
     navigate('search');
   }
 
   // console.log('Search ', inputText, genres);
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form onSubmit={(e) => handleSubmit(e)} className="search">
       <label htmlFor="search" className="search_container">
+        <div className="search_filter_container">
+          <button onClick={toggleDropdown} type="button">
+            <BsFilterSquare className="search_filterIcon" />
+          </button>
+          {showDropdown && (
+            <div className="dropdown">
+              {genreOptions.map((genre, index) => (
+                <label key={index}>
+                  <input
+                    type="checkbox"
+                    value={genre}
+                    onChange={handleGenresChange}
+                    checked={genres.includes(genre)}
+                  />
+                  {genre.charAt(0).toUpperCase() + genre.slice(1)}
+                </label>
+              ))}
+            </div>
+          )}
+        </div>
         <BsSearch className="search_icon" onClick={(e) => handleSubmit(e)} />
         <input
           className="search_input"
@@ -67,27 +87,6 @@ const Search = () => {
           }}
         />
       </label>
-
-      {/* <div>
-        <button onClick={toggleDropdown} type="button">
-          Filter by genres
-        </button>
-        {showDropdown && (
-          <div>
-            {genreOptions.map((genre, index) => (
-              <label key={index}>
-                <input
-                  type="checkbox"
-                  value={genre}
-                  onChange={handleGenresChange}
-                  checked={genres.includes(genre)}
-                />
-                {genre}
-              </label>
-            ))}
-          </div>
-        )}
-      </div> */}
     </form>
   );
 };

@@ -58,6 +58,7 @@ const SearchPage = ({ setIsLoading }) => {
     setIsLoading(true);
     setText({
       title: '',
+      genres: '',
       error: ``,
     });
     setResult([]);
@@ -83,6 +84,7 @@ const SearchPage = ({ setIsLoading }) => {
         setIsLoading(false);
         setText({
           title: `Result for : ${inputText}`,
+          genres: `Genres active : ${genres}`,
           error: `No results for : ${inputText}`,
         });
       });
@@ -153,18 +155,23 @@ const SearchPage = ({ setIsLoading }) => {
   return (
     <div className="container searchPage_container">
       {text.title.length > 0 && (
-        <div className="searchPage_top">
-          <h2 lassName="searchPage_title">{text.title} - </h2>
-          <select
-            onChange={(e) => sortResults(e.target.value)}
-            className="searchPage_select"
-          >
-            <option value="">Select order</option>
-            <option value="title_AZ">Title A-Z</option>
-            <option value="title_ZA">Title Z-A</option>
-            <option value="imdb_rating_best">ImDb Rating Best</option>
-            <option value="imdb_rating_worse">ImDb Rating Worse</option>
-          </select>
+        <div>
+          <div className="searchPage_top">
+            <h2 lassName="searchPage_title">{text.title} - </h2>
+            <select
+              onChange={(e) => sortResults(e.target.value)}
+              className="searchPage_select"
+            >
+              <option value="">Select order</option>
+              <option value="title_AZ">Title A-Z</option>
+              <option value="title_ZA">Title Z-A</option>
+              <option value="imdb_rating_best">ImDb Rating Best</option>
+              <option value="imdb_rating_worse">ImDb Rating Worse</option>
+            </select>
+          </div>
+          {genres.length > 0 && (
+            <p className="searchPage_genres">{text.genres}</p>
+          )}
         </div>
       )}
 
