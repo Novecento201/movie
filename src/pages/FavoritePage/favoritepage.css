@@ -1,0 +1,49 @@
+.favorites_top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.favorites_title {
+  font-size: var(--title-size);
+  font-family: 'Poppins';
+}
+
+.favorites_select {
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  font-size: calc(var(--font-size) * 0.9);
+}
+
+.favorites_option {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.favorites_container_results {
+  display: flex;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favorite_card {
+  position: relative;
+  width: 230px;
+  height: 300px;
+}
+.img_favorites {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: 300ms ease-in-out;
+}
+
+.favorite_card:hover .img_favorites {
+  filter: brightness(0.5);
+}

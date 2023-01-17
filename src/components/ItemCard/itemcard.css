@@ -1,0 +1,59 @@
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: 300ms ease-in-out;
+}
+
+.card:hover .card_image {
+  filter: brightness(0.5);
+}
+
+.card_rank {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+  font-size: calc(var(--font-size) * 2.5);
+  text-shadow: 2px 2px black;
+}
+.card_text_container {
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(116, 116, 116, 0.3);
+}
+
+.card_title {
+  text-shadow: 2px 2px var(--first-color);
+  font-size: calc(var(--font-size) * 1.1);
+  margin-bottom: 0.5rem;
+}
+
+.card_text_container div {
+  display: flex;
+  justify-content: space-between;
+  align-items: calc();
+}
+
+.card_text_container div button {
+  font-size: calc(var(--font-size) * 1.3);
+}
+
+.card_rating {
+  font-size: calc(var(--font-size) * 0.8);
+}
+
+.full_heart {
+  color: var(--third-color);
+}

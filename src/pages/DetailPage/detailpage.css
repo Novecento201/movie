@@ -1,0 +1,80 @@
+.detail_title {
+  font-size: var(--title-size);
+  font-family: 'Poppins';
+  margin-bottom: 1rem;
+}
+.detail_image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.detail_info {
+  display: flex;
+  column-gap: 2rem;
+  font-size: calc(var(--font-size) * 1.1);
+}
+
+.detail_minorInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+.detail_trailer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.detail_superMinorInfo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.detail_hr {
+  margin: 2rem 0;
+}
+.detail_actor_title {
+  margin-bottom: 1rem;
+}
+
+.container_actors {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.detail_actor {
+  display: inline-block;
+  width: 300px;
+  height: 250px;
+  margin-right: 1rem;
+  position: relative;
+}
+.detail_actor_image {
+  width: 200px;
+  height: 250px;
+  object-fit: center;
+  filter: brightness(0.5);
+}
+
+.detail_actor_name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+}
+
+.detail_heart {
+  font-size: calc(var(--font-size) * 2);
+}
+
+br {
+  margin: auto 0.5rem;
+}

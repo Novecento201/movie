@@ -1,0 +1,26 @@
+.search_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+.search_icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  font-size: calc(var(--font-size) * 1.2);
+}
+
+.search_icon:hover {
+  color: var(--third-color);
+}
+
+.search_input {
+  width: 100%;
+  padding: 4px;
+  font-size: var(--font-size);
+  font-family: 'Roboto';
+}
