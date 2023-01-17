@@ -24,7 +24,7 @@ const Slider = ({ data, name }) => {
           <div className="slider_speed">
             <AiOutlinePlus
               className="slider_icon"
-              onClick={() => setSpeed((prevSpeed) => (prevSpeed += 150))}
+              onClick={() => setSpeed((prevSpeed) => (prevSpeed -= 150))}
             />
             <input
               name="speed"
@@ -37,7 +37,7 @@ const Slider = ({ data, name }) => {
             />
             <AiOutlineMinus
               className="slider_icon"
-              onClick={() => setSpeed((prevSpeed) => (prevSpeed -= 150))}
+              onClick={() => setSpeed((prevSpeed) => (prevSpeed += 150))}
             />
           </div>
         </div>
